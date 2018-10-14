@@ -78,9 +78,33 @@ void median(int darth_vader[],int x)
 the function for frequency; the most notorious one
 */
 
-void freq(int darth_vader[],int x)
-{
-
+void freq(int darth_vader[],int &x)
+{ 
+	int ct=0,cnt=1,tp;
+	for(int i=0;i<(x);i++)
+	{
+		if(darth_vader[i]==arr[i+1])
+	 	{
+			cnt++;
+		}
+		else 
+		{
+			if(cnt>ct)
+			{
+				ct=cnt;
+				tp=darth_vader[i];
+			}
+			cnt=1;
+		}
+	}
+	if(ct>1)
+	{
+		cout<<"the maximum frequency is of "<<tp<<" and is "<<ct<<endl;}
+	else
+	{
+		cout<<"all elements are distinct"<<endl;
+	}
+	return 0;
 }
 
 /*
