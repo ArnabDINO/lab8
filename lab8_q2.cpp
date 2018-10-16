@@ -78,34 +78,70 @@ void median(int darth_vader[],int x)
 the function for frequency; the most notorious one
 */
 
-void freq(int darth_vader[],int &x)
-{ 
-	int ct=0,cnt=1,tp;
-	for(int i=0;i<(x);i++)
+void freq(int darth_vader[], int&x)
+{
+	int freqarr[x];
+	for(int i=0;i<x;i++)
+	{
+		freqarr[i]=0;
+	}
+	int k=0;
+	freqarr[0]=1;
+	for(int i=0;i<x;i++)
 	{
 		if(darth_vader[i]==darth_vader[i+1])
-	 	{
-			cnt++;
-		}
-		else 
 		{
-			if(cnt>ct)
-			{
-				ct=cnt;
-				tp=darth_vader[i];
-			}
-			cnt=1;
+			freqarr[k]+=1;
+		}
+		else
+		{
+			k=i+1;
+			freqarr[k]++;
 		}
 	}
-	if(ct>1)
+	
+/* 
+the following reflects my thoughts and experiments
+so i haven't deleted them
+*/
+/*	for(int i=0;i<x;i++)
 	{
-		cout<<"the maximum frequency is of "<<tp<<" and is "<<ct<<endl;}
-	else
+		cout<<darth_vader[i]<<"--";
+		cout<<freqarr[i]<<"\n";
+	}
+*/	
+	/* now for printing out the frequencies*/
+	int l,m;
+	l=freqarr[0];
+	/*int printarr[x]
+	int z=0*/
+	for(int i=0;i<x;i++)
 	{
-		cout<<"all elements are distinct"<<endl;
+		if(freqarr[i]>=l)
+		{
+			l=freqarr[i];
+			m=i;
+			/*
+			ANOTHER UNNECESSARY CODE FOLLOWS
+			*/
+			
+			/*printarr[z]=i;
+			z++;
+			if(i==x)
+			{
+				printarr[z]="\0";
+			}*/
+		}
+	}
+	for(int a=0;a<x;a++)
+	{	
+		if(freqarr
+		[a]==freqarr[l]) {
+			cout<< "the highest freq is of "<<darth_vader[a]<<" and is "<<l<<"\n";
+		}
+		else continue;
 	}
 }
-
 /*
 driver at the end to drive the chu-chu-chu
 */
