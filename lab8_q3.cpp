@@ -14,7 +14,7 @@ void lowest(int arr[],int &k)
 
 void highest(int arr[],int &k,int &x)
 {
-	cout<<"the largest element is "<<arr[x-k]<<endl;
+	cout<<"the "<<k<<"th largest element is "<<arr[x-k]<<endl;
 }
 
 
