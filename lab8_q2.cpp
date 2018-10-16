@@ -83,7 +83,7 @@ void freq(int darth_vader[],int &x)
 	int ct=0,cnt=1,tp;
 	for(int i=0;i<(x);i++)
 	{
-		if(darth_vader[i]==arr[i+1])
+		if(darth_vader[i]==darth_vader[i+1])
 	 	{
 			cnt++;
 		}
@@ -104,7 +104,6 @@ void freq(int darth_vader[],int &x)
 	{
 		cout<<"all elements are distinct"<<endl;
 	}
-	return 0;
 }
 
 /*
